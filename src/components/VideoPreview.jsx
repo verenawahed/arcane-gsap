@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { useState, useRef, useEffect } from "react";
 
-export const VideoPreview = ({ children }) => {
+export const VideoProview= ({ children }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   const sectionRef = useRef(null); 
@@ -15,7 +15,7 @@ export const VideoPreview = ({ children }) => {
     const yOffset = clientY - (rect.top + rect.height / 2); 
 
     if (isHovering) {
-      
+  
       gsap.to(sectionRef.current, {
         x: xOffset,
         y: yOffset,
@@ -81,4 +81,4 @@ export const VideoPreview = ({ children }) => {
   );
 };
 
-export default VideoPreview;
+export default VideoProview;

@@ -5,7 +5,8 @@ import { TiLocationArrow } from "react-icons/ti";
 import { useEffect, useRef, useState } from "react";
 
 import Button from "./Button";
-import VideoPreview from "./VideoPreview.JSX";
+import { VideoProview } from "./VideoPreview";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,7 +101,7 @@ const Hero = () => {
       >
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
-            <VideoPreview>
+            <VideoProview/>
               <div
                 onClick={handleMiniVdClick}
                 className="origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100"
@@ -115,7 +116,7 @@ const Hero = () => {
                   onLoadedData={handleVideoLoad}
                 />
               </div>
-            </VideoPreview>
+            <VideoProview/>
           </div>
 
           <video

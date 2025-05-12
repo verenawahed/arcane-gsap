@@ -62,16 +62,17 @@ const FloatingImage = () => {
           <div className="story-img-container">
             <div className="story-img-mask">
               <div className="story-img-content">
-                <img
-                  ref={frameRef}
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={handleMouseLeave}
-                  onMouseUp={handleMouseLeave}
-                  onMouseEnter={handleMouseLeave}
-                  src="/img/entrance.webp"
-                  alt="entrance.webp"
-                  className="object-contain"
-                />
+              <img
+  ref={frameRef}
+  onMouseMove={handleMouseMove}
+  onMouseLeave={handleMouseLeave}
+  onMouseUp={handleMouseLeave}
+  onMouseEnter={handleMouseLeave}
+  src={`${import.meta.env.BASE_URL}img/entrance.webp`}
+  alt="entrance.webp"
+  className="object-contain"
+/>
+
               </div>
             </div>
             <RoundedCorners/>
